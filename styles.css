@@ -1,0 +1,35 @@
+/* Basic, clean styles for the Movie Theme project */
+:root{--accent:#e63946;--muted:#666}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#222}
+.container{max-width:980px;margin:0 auto;padding:20px}
+.site-header{background:#111;color:#fff}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.site-header nav a{color:#fff;margin-left:16px;text-decoration:none}
+.logo a{color:#fff;text-decoration:none}
+.intro{padding:24px 0}
+.banner img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#f8f8f8;padding:16px;border-radius:8px}
+.movies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.movie-card{background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 6px rgba(0,0,0,0.06);position:relative;overflow:hidden}
+.movie-card img{width:100%;height:320px;object-fit:cover;border-radius:6px}
+.movie-card h3{margin:10px 0 6px}
+.movie-card .desc{color:var(--muted);margin:0 0 10px}
+.movie-card .more-info{position:absolute;left:0;right:0;bottom:-120px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff);padding:12px;transition:bottom .25s}
+.movie-card:hover .more-info{bottom:0}
+.news-post{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #eee}
+.news-post img{width:180px;height:100px;object-fit:cover;border-radius:6px}
+.cinema-card img{width:100%;height:160px;object-fit:cover;border-radius:6px}
+.site-footer{background:#fafafa;padding:12px 0;margin-top:30px;text-align:center;color:#666}
+@media (max-width:600px){.site-header .container{flex-direction:column;gap:8px}}
+
+
+
+
+
+
+<!-- FILE: scripts.js -->
+// Simple script: add keyboard shortcut "g" to go to genres page
+window.addEventListener('keydown', (e)=>{if(e.key.toLowerCase()==='g'){location.href='genres.html'}})
+
