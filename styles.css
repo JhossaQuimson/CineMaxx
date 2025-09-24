@@ -126,13 +126,3 @@ font-size: 1rem;
 line-height: 1.4;
 color: #333;
 }
-
-
-
-
-
-
-<!-- FILE: scripts.js -->
-// Simple script: add keyboard shortcut "g" to go to genres page
-window.addEventListener('keydown', (e)=>{if(e.key.toLowerCase()==='g'){location.href='genres.html'}})
-
