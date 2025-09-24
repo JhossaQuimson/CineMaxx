@@ -32,6 +32,64 @@ gap: 1.5rem;
 margin-top: 1.5rem;
 }
 
+/* Center page title */
+.page-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Center text inside cards */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Remove underline from links */
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Dark overlay for better readability */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+.card h4 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+/* Background images for each genre */
+.card.action {
+  background-image: url('https://images.unsplash.com/photo-1606813908897-c8dfc7aa2d43?auto=format&fit=crop&w=800&q=60');
+}
+.card.comedy {
+  background-image: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=800&q=60');
+}
+.card.drama {
+  background-image: url('https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=800&q=60');
+}
+.card.scifi {
+  background-image: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=60');
+}
+.card.animation {
+  background-image: url('https://images.unsplash.com/photo-1581905764498-3c62e8d203ab?auto=format&fit=crop&w=800&q=60');
+}
 
 /* Individual news card styling */
 .news-card {
@@ -41,40 +99,28 @@ box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 overflow: hidden;
 transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-
 .news-card:hover {
 transform: translateY(-5px);
 box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
-
 .news-card img {
 width: 100%;
 height: 180px;
 object-fit: cover;
 }
-
-
 .news-content {
 padding: 1rem;
 }
-
-
 .news-content h3 {
 font-size: 1.2rem;
 margin: 0.5rem 0;
 }
-
-
 .news-content time {
 display: block;
 font-size: 0.9rem;
 color: #777;
 margin-bottom: 0.5rem;
 }
-
-
 .news-content .excerpt {
 font-size: 1rem;
 line-height: 1.4;
